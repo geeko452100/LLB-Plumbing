@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MVP for a drywall construction business."
+    />
+    <title>ACME Drywall</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                charcoal: "#202124",
+                steel: "#48515a",
+                safety: "#d97706",
+                plaster: "#f3f1ec",
+                board: "#f8fafc",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-brand-board text-brand-charcoal antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        aria-label="Main navigation"
+      >
+        <a href="#home" class="flex items-center gap-3 font-semibold">
+          <span
+            class="grid h-10 w-10 place-items-center rounded bg-brand-charcoal text-sm font-black text-white"
+            aria-hidden="true"
+          >
+            AD
+          </span>
+          <span>
+            <span class="block text-lg leading-tight">ACME Drywall</span>
+            <span class="block text-xs font-medium uppercase tracking-wide text-brand-steel">
+              Hanging. Finishing. Repair.
+            </span>
+          </span>
+        </a>
+
+        <button
+          id="menuToggle"
+          class="inline-flex h-10 w-10 items-center justify-center rounded border border-slate-300 text-brand-charcoal md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="sr-only">Open menu</span>
+          <span class="block h-0.5 w-5 bg-current before:block before:h-0.5 before:w-5 before:-translate-y-2 before:bg-current before:content-[''] after:block after:h-0.5 after:w-5 after:translate-y-1.5 after:bg-current after:content-['']"></span>
+        </button>
+
+        <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a class="hover:text-brand-safety" href="#services">Services</a>
+          <a class="hover:text-brand-safety" href="#projects">Projects</a>
+          <a class="hover:text-brand-safety" href="#process">Process</a>
+          <a class="hover:text-brand-safety" href="#contact">Contact</a>
+          <a
+            class="rounded bg-brand-safety px-4 py-2 font-semibold text-white shadow-sm hover:bg-amber-700"
+            href="#contact"
+          >
+            Request Estimate
+          </a>
+        </div>
+      </nav>
+
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
+        <div class="grid gap-3 text-sm font-medium">
+          <a class="py-2" href="#services">Services</a>
+          <a class="py-2" href="#projects">Projects</a>
+          <a class="py-2" href="#process">Process</a>
+          <a class="py-2" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="bg-brand-plaster">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+          <div class="flex flex-col justify-center">
+            <p class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-safety">
+              Licensed drywall construction
+            </p>
+            <h1 class="max-w-3xl text-4xl font-black leading-tight text-brand-charcoal sm:text-5xl lg:text-6xl">
+              Clean drywall work for homes, remodels, and commercial spaces.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-brand-steel">
+              Replace this copy with your company promise. This starter gives you the core
+              sections a drywall contractor needs: services, proof points, project examples,
+              process, and a contact form.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                class="rounded bg-brand-charcoal px-5 py-3 text-center font-semibold text-white shadow-sm hover:bg-slate-800"
+                href="#contact"
+              >
+                Get a Free Quote
+              </a>
+              <a
+                class="rounded border border-slate-300 bg-white px-5 py-3 text-center font-semibold text-brand-charcoal hover:border-brand-safety"
+                href="tel:+15550122900"
+              >
+                Call (555) 012-2900
+              </a>
+            </div>
+          </div>
+
+          <div class="relative min-h-[360px] overflow-hidden rounded border border-slate-200 bg-white shadow-sm">
+            <img
+              class="h-full min-h-[360px] w-full object-cover"
+              src="assets/img/construction-worker.avif"
+              alt="Construction worker finishing interior wall framing"
+            />
+            <div class="absolute bottom-0 left-0 right-0 bg-white/92 p-5 backdrop-blur">
+              <dl class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <dt class="text-2xl font-black">15+</dt>
+                  <dd class="text-xs font-semibold uppercase tracking-wide text-brand-steel">Years</dd>
+                </div>
+                <div>
+                  <dt class="text-2xl font-black">900+</dt>
+                  <dd class="text-xs font-semibold uppercase tracking-wide text-brand-steel">Jobs</dd>
+                </div>
+                <div>
+                  <dt class="text-2xl font-black">24 hr</dt>
+                  <dd class="text-xs font-semibold uppercase tracking-wide text-brand-steel">Reply</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Services</p>
+          <h2 class="mt-3 text-3xl font-black sm:text-4xl">Drywall services built for job-site realities.</h2>
+          <p class="mt-4 text-brand-steel">
+            Keep, remove, or rename these service blocks to match the business.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold">Drywall Hanging</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Layout, board installation, fastening, corner bead, and prep for finishing.
+            </p>
+          </article>
+          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold">Taping and Finishing</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Smooth finish levels, texture matching, sanding, cleanup, and punch-list work.
+            </p>
+          </article>
+          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold">Repairs and Patches</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Water damage, cracks, holes, ceiling patches, and ready-to-paint repairs.
+            </p>
+          </article>
+          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-bold">Commercial Buildouts</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Tenant improvements, office interiors, retail spaces, and coordinated schedules.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-white py-16">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Recent Work</p>
+              <h2 class="mt-3 text-3xl font-black sm:text-4xl">Project types you can feature.</h2>
+              <p class="mt-4 text-brand-steel">
+                Add real project photos and descriptions when you have them. This structure is ready
+                for remodels, new construction, and repair galleries.
+              </p>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-3">
+              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
+                <img
+                  class="h-40 w-full object-cover"
+                  src="/assets/img/residential-remodel.avif"
+                  alt="Finished residential interior"
+                />
+                <div class="p-4">
+                  <h3 class="font-bold">Residential Remodel</h3>
+                  <p class="mt-2 text-sm text-brand-steel">Basement board, finish, and texture.</p>
+                </div>
+              </article>
+              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
+                <img
+                  class="h-40 w-full object-cover"
+                  src="/assets/img/office-buildout.avif"
+                  alt="Modern office interior"
+                />
+                <div class="p-4">
+                  <h3 class="font-bold">Office Buildout</h3>
+                  <p class="mt-2 text-sm text-brand-steel">Framing coordination and Level 4 finish.</p>
+                </div>
+              </article>
+              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
+                <img
+                  class="h-40 w-full object-cover"
+                  src="/assets/img/ceiling-repair.avif"
+                  alt="Clean home interior"
+                />
+                <div class="p-4">
+                  <h3 class="font-bold">Ceiling Repair</h3>
+                  <p class="mt-2 text-sm text-brand-steel">Patch, skim coat, and paint-ready prep.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Process</p>
+          <h2 class="mt-3 text-3xl font-black sm:text-4xl">A simple path from estimate to clean finish.</h2>
+        </div>
+        <ol class="mt-10 grid gap-5 md:grid-cols-3">
+          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="text-sm font-black text-brand-safety">01</span>
+            <h3 class="mt-3 text-lg font-bold">Site Review</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Gather measurements, job photos, timeline, access details, and finish expectations.
+            </p>
+          </li>
+          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="text-sm font-black text-brand-safety">02</span>
+            <h3 class="mt-3 text-lg font-bold">Clear Estimate</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Provide a written scope with labor, materials, schedule, and prep requirements.
+            </p>
+          </li>
+          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="text-sm font-black text-brand-safety">03</span>
+            <h3 class="mt-3 text-lg font-bold">Professional Finish</h3>
+            <p class="mt-3 text-sm leading-6 text-brand-steel">
+              Complete the work, protect the site, clean up, and walk the job before closeout.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="contact" class="bg-brand-charcoal py-16 text-white">
+        <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-wide text-amber-400">Contact</p>
+            <h2 class="mt-3 text-3xl font-black sm:text-4xl">Ready for your next drywall job.</h2>
+            <p class="mt-4 text-slate-300">
+              Fill out the form or call to schedule a free estimate. We respond quickly and can
+              often provide same-day or next-day appointments.
+            </p>
+            <div class="mt-8 space-y-3 text-sm text-slate-200">
+              <p><strong class="text-white">Phone:</strong> (555) 012-2900</p>
+              <p><strong class="text-white">Email:</strong> estimates@summitdrywall.example</p>
+              <p><strong class="text-white">Service Area:</strong> Your city and surrounding suburbs</p>
+            </div>
+          </div>
+
+          <form id="contactForm" class="rounded bg-white p-6 text-brand-charcoal shadow-sm" novalidate>
+            <div id="formStatus" class="mb-5 hidden rounded border px-4 py-3 text-sm" role="status"></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="block">
+                <span class="text-sm font-semibold">Name</span>
+                <input
+                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm font-semibold">Phone</span>
+                <input
+                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  required
+                />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="text-sm font-semibold">Email</span>
+                <input
+                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+              <label class="block">
+                <span class="text-sm font-semibold">Project Type</span>
+                <select
+                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  name="projectType"
+                  required
+                >
+                  <option value="">Select one</option>
+                  <option>Drywall hanging</option>
+                  <option>Taping and finishing</option>
+                  <option>Repair or patch</option>
+                  <option>Commercial buildout</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-semibold">Timeline</span>
+                <select
+                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  name="timeline"
+                >
+                  <option>Flexible</option>
+                  <option>As soon as possible</option>
+                  <option>Within 2 weeks</option>
+                  <option>Within 1 month</option>
+                </select>
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="text-sm font-semibold">Project Details</span>
+                <textarea
+                  class="mt-2 min-h-32 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  name="message"
+                  placeholder="Tell us about room count, square footage, repairs, textures, or deadlines."
+                  required
+                ></textarea>
+              </label>
+            </div>
+            <button
+              class="mt-6 w-full rounded bg-brand-safety px-5 py-3 font-bold text-white shadow-sm hover:bg-amber-700"
+              type="submit"
+            >
+              Send Estimate Request
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-brand-steel sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <p>&copy; <span id="year"></span> Summit Drywall Co. All rights reserved.</p>
+        <p>Licensed and insured. Replace with your license number.</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
