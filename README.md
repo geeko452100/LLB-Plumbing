@@ -1,4 +1,4 @@
-# Drywall Business Starter Template
+# Construction Business Starter Template
 
 A static starter website for a drywall construction business. It keeps a Tailwind CSS build setup available while committing a small production CSS file for fast first loads and strong Lighthouse scores.
 
