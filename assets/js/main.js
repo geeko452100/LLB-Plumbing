@@ -31,8 +31,10 @@ function showStatus(type, message) {
   formStatus.textContent = message;
 }
 
+const dispatch = new PrairieDispatch("pk_e536cb00c4c237845bc2b1433e5405928c42ec4afeb1bed2");
+
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     if (!contactForm.checkValidity()) {
@@ -42,21 +44,24 @@ if (contactForm) {
     }
 
     const data = Object.fromEntries(new FormData(contactForm).entries());
-    const subject = encodeURIComponent(`Free estimate request from ${data.name}`);
-    const body = encodeURIComponent(
-      [
-        `Name: ${data.name}`,
-        `Phone: ${data.phone}`,
-        `Email: ${data.email}`,
-        `Address: ${data.address}`,
-        "",
-        "Details:",
-        data.message,
-      ].join("\n"),
-    );
+    const notes = [`Email: ${data.email}`, data.message].filter(Boolean).join(" — ");
 
-    showStatus("success", "Thanks. Your email app will open with the estimate request ready to send.");
-    window.location.href = `mailto:office@llbplumbing.example?subject=${subject}&body=${body}`;
-    contactForm.reset();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    try {
+      await dispatch.send({
+        customerName: data.customerName,
+        phone: data.phone,
+        address: data.address,
+        notes,
+      });
+      showStatus("success", "Thanks. We've been notified and will call you back shortly.");
+      contactForm.reset();
+    } catch (err) {
+      showStatus("error", "Something went wrong sending your request. Please call us instead.");
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 }
