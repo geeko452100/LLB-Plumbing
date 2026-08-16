@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="MVP for a drywall construction business."
+      content="LLB Plumbing provides expert plumbing services in Great Bend, Kansas, including drain cleaning, sewer line repair, and water heater installation. Call (620) 797-7465 for a free estimate."
     />
-    <title>ACME Drywall</title>
+    <meta property="og:title" content="LLB Plumbing | Great Bend, KS" />
+    <meta property="og:description" content="Reliable plumbing solutions for home and business needs in Great Bend, Kansas." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%235B2A86'/%3E%3Ctext x='32' y='42' font-family='Georgia, serif' font-weight='bold' font-size='26' fill='%23F5F2EA' text-anchor='middle'%3ELLB%3C/text%3E%3C/svg%3E" />
+    <title>LLB Plumbing | Great Bend, KS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -15,45 +26,52 @@
           extend: {
             colors: {
               brand: {
-                charcoal: "#202124",
-                steel: "#48515a",
-                safety: "#d97706",
-                plaster: "#f3f1ec",
-                board: "#f8fafc",
+                purple: "#5B2A86",
+                purpleDark: "#3D1B5C",
+                teal: "#0F6B72",
+                tealDark: "#0B4F54",
+                cream: "#F5F2EA",
+                ink: "#1B1B1B",
+                slate: "#5B5850",
               },
             },
             fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              sans: ["'Josefin Sans'", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["'Righteous'", "ui-sans-serif", "system-ui", "sans-serif"],
             },
           },
         },
       };
     </script>
   </head>
-  <body class="bg-brand-board text-brand-charcoal antialiased">
-    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+  <body class="bg-brand-cream font-sans text-brand-ink antialiased">
+    <div class="bg-amber-400 px-4 py-2 text-center text-sm font-semibold text-brand-ink">
+      Interactive Website Concept created by Prairie Web Studio. This is an independent design proposal
+      and is not the official website for LLB Plumbing.
+    </div>
+    <header class="sticky top-0 z-50 border-b border-black/10 bg-brand-cream/95 backdrop-blur">
       <nav
         class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
         aria-label="Main navigation"
       >
-        <a href="#home" class="flex items-center gap-3 font-semibold">
+        <a href="#home" class="flex items-center gap-3">
           <span
-            class="grid h-10 w-10 place-items-center rounded bg-brand-charcoal text-sm font-black text-white"
+            class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand-purple font-display text-sm text-brand-cream"
             aria-hidden="true"
           >
-            AD
+            LLB
           </span>
           <span>
-            <span class="block text-lg leading-tight">ACME Drywall</span>
-            <span class="block text-xs font-medium uppercase tracking-wide text-brand-steel">
-              Hanging. Finishing. Repair.
+            <span class="block font-display text-xl leading-tight text-brand-purple">LLB Plumbing</span>
+            <span class="block text-xs font-semibold uppercase tracking-widest text-brand-teal">
+              Plumbing &amp; Drain Cleaning
             </span>
           </span>
         </a>
 
         <button
           id="menuToggle"
-          class="inline-flex h-10 w-10 items-center justify-center rounded border border-slate-300 text-brand-charcoal md:hidden"
+          class="inline-flex h-10 w-10 items-center justify-center rounded border border-brand-ink/20 text-brand-ink md:hidden"
           type="button"
           aria-expanded="false"
           aria-controls="mobileMenu"
@@ -62,232 +80,218 @@
           <span class="block h-0.5 w-5 bg-current before:block before:h-0.5 before:w-5 before:-translate-y-2 before:bg-current before:content-[''] after:block after:h-0.5 after:w-5 after:translate-y-1.5 after:bg-current after:content-['']"></span>
         </button>
 
-        <div class="hidden items-center gap-4 text-sm font-medium md:flex">
-            <p class="font-bold text-lg text-charcoal shadow-sm">
-              Demo Site Only 
-            </p>
-          </a>
-          
-          <a class="hover:text-brand-safety" href="#services">Services</a>
-          <a class="hover:text-brand-safety" href="#projects">Projects</a>
-          <a class="hover:text-brand-safety" href="#process">Process</a>
-          <a class="hover:text-brand-safety" href="#contact">Contact</a>
+        <div class="hidden items-center gap-6 text-sm font-semibold md:flex">
+          <a class="hover:text-brand-teal" href="#services">Services</a>
+          <a class="hover:text-brand-teal" href="#about">About</a>
+          <a class="hover:text-brand-teal" href="#contact">Contact</a>
+          <a class="hover:text-brand-teal" href="tel:+16207977465">(620) 797-7465</a>
           <a
-            class="rounded bg-brand-safety px-4 py-2 font-semibold text-white shadow-sm hover:bg-amber-700"
+            class="rounded bg-brand-teal px-4 py-2 font-bold text-white shadow-sm hover:bg-brand-tealDark"
             href="#contact"
           >
-            Request Estimate
+            Free Estimate
           </a>
-          
-        </nav>
-      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
-        <div class="grid gap-4 text-sm font-medium">
-          <a class="py-4"href="https://prairiewebstudio.com">Prairie Web Studio</a>
-          <a class="py-4" href="#services">Services</a>
-          <a class="py-4" href="#projects">Projects</a>
-          <a class="py-4" href="#process">Process</a>
-          <a class="py-4" href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="hidden border-t border-black/10 bg-brand-cream px-4 py-4 md:hidden">
+        <div class="grid gap-4 text-sm font-semibold">
+          <a class="py-2" href="#services">Services</a>
+          <a class="py-2" href="#about">About</a>
+          <a class="py-2" href="#contact">Contact</a>
+          <a class="py-2 text-brand-teal" href="tel:+16207977465">Call (620) 797-7465</a>
         </div>
       </div>
     </header>
 
     <main id="home">
-      <section class="bg-brand-plaster">
+      <section class="bg-brand-cream">
         <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
           <div class="flex flex-col justify-center">
-            <p class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-safety">
-              Licensed drywall construction
+            <p class="mb-4 text-sm font-bold uppercase tracking-widest text-brand-teal">
+              Great Bend, Kansas
             </p>
-            <h1 class="max-w-3xl text-4xl font-black leading-tight text-brand-charcoal sm:text-5xl lg:text-6xl">
-              Clean drywall work for homes, remodels, and commercial spaces.
+            <h1 class="max-w-3xl font-display text-4xl leading-tight text-brand-purple sm:text-5xl lg:text-6xl">
+              Expert plumbing services in Great Bend.
             </h1>
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-brand-steel">
-              Replace this copy with your company promise. This starter gives you the core
-              sections a drywall contractor needs: services, proof points, project examples,
-              process, and a contact form.
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-brand-slate">
+              Reliable plumbing solutions for home and business needs &mdash; from drain cleaning
+              to full sewer line repair. We treat every property with the utmost respect and care.
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                class="rounded bg-brand-charcoal px-5 py-3 text-center font-semibold text-white shadow-sm hover:bg-slate-800"
+                class="rounded bg-brand-teal px-5 py-3 text-center font-bold text-white shadow-sm hover:bg-brand-tealDark"
                 href="#contact"
               >
-                Get a Free Quote
+                Get a Free Estimate
               </a>
               <a
-                class="rounded border border-slate-300 bg-white px-5 py-3 text-center font-semibold text-brand-charcoal hover:border-brand-safety"
-                href="tel:+15550122900"
+                class="rounded border-2 border-brand-purple bg-white px-5 py-3 text-center font-bold text-brand-purple hover:bg-brand-purple hover:text-white"
+                href="tel:+16207977465"
               >
-                Call (555) 012-2900
+                Call (620) 797-7465
               </a>
             </div>
+            <dl class="mt-10 grid grid-cols-2 gap-4 text-sm font-semibold text-brand-ink sm:grid-cols-4">
+              <div class="rounded border border-brand-ink/10 bg-white/60 px-3 py-3 text-center">
+                Locally Owned
+              </div>
+              <div class="rounded border border-brand-ink/10 bg-white/60 px-3 py-3 text-center">
+                Drain Specialists
+              </div>
+              <div class="rounded border border-brand-ink/10 bg-white/60 px-3 py-3 text-center">
+                Free Estimates
+              </div>
+              <div class="rounded border border-brand-ink/10 bg-white/60 px-3 py-3 text-center">
+                Serving Great Bend
+              </div>
+            </dl>
           </div>
 
-          <div class="relative min-h-[360px] overflow-hidden rounded border border-slate-200 bg-white shadow-sm">
+          <div class="relative min-h-[360px] overflow-hidden rounded-lg border border-black/10 bg-white shadow-md">
             <img
               class="h-full min-h-[360px] w-full object-cover"
-              src="./assets/img/construction-worker.avif"
-              alt="Construction helmet resting on cement brick"
+              src="./assets/img/truck-logo.jpg"
+              alt="LLB Plumbing truck parked beside a completed drain cleanout repair in a Great Bend neighborhood"
             />
-            <div class="absolute bottom-0 left-0 right-0 bg-white/92 p-5 backdrop-blur">
-              <dl class="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <dt class="text-3xl font-bold">15+</dt>
-                  <dd class="text-lg font-semibold uppercase tracking-wide">Years</dd>
-                </div>
-                <div>
-                  <dt class="text-3xl font-bold text-brand-charcoal">900+</dt>
-                  <dd class="text-lg font-semibold uppercase tracking-wide">Jobs</dd>
-                </div>
-                <div>
-                  <dt class="text-3xl font-bold">24 hr</dt>
-                  <dd class="text-lg font-semibold uppercase tracking-wide">Reply</dd>
-                </div>
-              </dl>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Services</p>
-          <h2 class="mt-3 text-3xl font-black sm:text-4xl">Drywall services built for job-site realities.</h2>
-          <p class="mt-4 text-brand-steel">
-            Keep, remove, or rename these service blocks to match the business.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-lg font-bold">Drywall Hanging</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Layout, board installation, fastening, corner bead, and prep for finishing.
+      <section id="about" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div class="mx-auto w-full max-w-md overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm">
+            <img
+              class="aspect-[13/8] w-full object-cover object-bottom"
+              src="./assets/img/hero.jpg"
+              alt="LLB Plumbing and Drain Cleaning logo, featuring a cartoon plumber mascot"
+            />
+          </div>
+          <div>
+            <p class="text-sm font-bold uppercase tracking-widest text-brand-teal">About LLB Plumbing</p>
+            <h2 class="mt-3 font-display text-3xl text-brand-purple sm:text-4xl">Our Mission</h2>
+            <p class="mt-4 max-w-2xl text-brand-slate">
+              At LLB Plumbing, our mission is to provide reliable and high-quality plumbing
+              services to our community. We believe in treating every customer&rsquo;s home or
+              business with the utmost respect and care.
             </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-lg font-bold">Taping and Finishing</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Smooth finish levels, texture matching, sanding, cleanup, and punch-list work.
+            <p class="mt-4 max-w-2xl text-brand-slate">
+              We stay in constant communication with our customers until the job is done &mdash;
+              from the first call to the final walkthrough.
             </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-lg font-bold">Repairs and Patches</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Water damage, cracks, holes, ceiling patches, and ready-to-paint repairs.
-            </p>
-          </article>
-          <article class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 class="text-lg font-bold">Commercial Buildouts</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Tenant improvements, office interiors, retail spaces, and coordinated schedules.
-            </p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="projects" class="bg-white py-16">
+      <section id="services" class="bg-white py-16">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
-              <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Recent Work</p>
-              <h2 class="mt-3 text-3xl font-black sm:text-4xl">Project types you can feature.</h2>
-              <p class="mt-4 text-brand-steel">
-                Add real project photos and descriptions when you have them. This structure is ready
-                for remodels, new construction, and repair galleries.
-              </p>
-            </div>
-            <div class="grid gap-5 sm:grid-cols-3">
-              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
-                <img
-                  class="h-40 w-full object-cover"
-                  src="/assets/img/residential-remodel.avif"
-                  alt="Finished residential interior"
-                />
-                <div class="p-4">
-                  <h3 class="font-bold">Residential Remodel</h3>
-                  <p class="mt-2 text-sm text-brand-steel">Basement board, finish, and texture.</p>
-                </div>
-              </article>
-              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
-                <img
-                  class="h-40 w-full object-cover"
-                  src="/assets/img/office-buildout.avif"
-                  alt="Modern office interior"
-                />
-                <div class="p-4">
-                  <h3 class="font-bold">Office Buildout</h3>
-                  <p class="mt-2 text-sm text-brand-steel">Framing coordination and Level 4 finish.</p>
-                </div>
-              </article>
-              <article class="overflow-hidden rounded border border-slate-200 bg-brand-board">
-                <img
-                  class="h-40 w-full object-cover"
-                  src="/assets/img/ceiling-repair.avif"
-                  alt="Clean home interior"
-                />
-                <div class="p-4">
-                  <h3 class="font-bold">Ceiling Repair</h3>
-                  <p class="mt-2 text-sm text-brand-steel">Patch, skim coat, and paint-ready prep.</p>
-                </div>
-              </article>
-            </div>
+          <div class="max-w-3xl">
+            <p class="text-sm font-bold uppercase tracking-widest text-brand-teal">What We Do</p>
+            <h2 class="mt-3 font-display text-3xl text-brand-purple sm:text-4xl">
+              Plumbing work you can see in the field.
+            </h2>
+            <p class="mt-4 text-brand-slate">
+              A look at recent jobs around Great Bend &mdash; real work, from the ground up.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <article class="overflow-hidden rounded-lg border border-black/10 shadow-sm">
+              <img
+                class="h-44 w-full object-cover"
+                src="./assets/img/project-1.jpg"
+                alt="Sewer line excavation trench dug alongside a residential backyard"
+              />
+              <div class="p-5">
+                <h3 class="font-display text-base text-brand-purple">Sewer Line Repair</h3>
+                <p class="mt-2 text-sm leading-6 text-brand-slate">
+                  Excavation and replacement for damaged or aging sewer lines.
+                </p>
+              </div>
+            </article>
+            <article class="overflow-hidden rounded-lg border border-black/10 shadow-sm">
+              <img
+                class="h-44 w-full object-cover"
+                src="./assets/img/project-3.jpg"
+                alt="New PVC drain pipe fittings installed in a trench"
+              />
+              <div class="p-5">
+                <h3 class="font-display text-base text-brand-purple">Drain &amp; Sewer Installation</h3>
+                <p class="mt-2 text-sm leading-6 text-brand-slate">
+                  New drain and sewer pipe runs, fitted and set to code.
+                </p>
+              </div>
+            </article>
+            <article class="overflow-hidden rounded-lg border border-black/10 shadow-sm">
+              <img
+                class="h-44 w-full object-cover"
+                src="./assets/img/project-4.jpg"
+                alt="Tankless water heater unit installed and wired"
+              />
+              <div class="p-5">
+                <h3 class="font-display text-base text-brand-purple">Water Heater Installation</h3>
+                <p class="mt-2 text-sm leading-6 text-brand-slate">
+                  Tankless and traditional water heater install and replacement.
+                </p>
+              </div>
+            </article>
+            <article class="overflow-hidden rounded-lg border border-black/10 shadow-sm">
+              <img
+                class="h-44 w-full object-cover"
+                src="./assets/img/project-2.jpg"
+                alt="LLB Plumbing truck parked next to a serviced drain cleanout"
+              />
+              <div class="p-5">
+                <h3 class="font-display text-base text-brand-purple">Drain Cleaning</h3>
+                <p class="mt-2 text-sm leading-6 text-brand-slate">
+                  Clogged or slow drains cleared quickly, for homes and businesses.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="process" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-wide text-brand-safety">Process</p>
-          <h2 class="mt-3 text-3xl font-black sm:text-4xl">A simple path from estimate to clean finish.</h2>
+      <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm">
+          <img
+            class="h-64 w-full object-cover sm:h-80"
+            src="./assets/img/project-5.jpg"
+            alt="LLB Plumbing fleet of service trucks parked at the shop"
+          />
+          <div class="p-6 sm:p-8">
+            <h2 class="font-display text-2xl text-brand-purple">Ready to roll, every day.</h2>
+            <p class="mt-2 max-w-2xl text-brand-slate">
+              Our fleet stays stocked and ready so we can get to your job quickly.
+            </p>
+          </div>
         </div>
-        <ol class="mt-10 grid gap-5 md:grid-cols-3">
-          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <span class="text-sm font-black text-brand-safety">01</span>
-            <h3 class="mt-3 text-lg font-bold">Site Review</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Gather measurements, job photos, timeline, access details, and finish expectations.
-            </p>
-          </li>
-          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <span class="text-sm font-black text-brand-safety">02</span>
-            <h3 class="mt-3 text-lg font-bold">Clear Estimate</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Provide a written scope with labor, materials, schedule, and prep requirements.
-            </p>
-          </li>
-          <li class="rounded border border-slate-200 bg-white p-6 shadow-sm">
-            <span class="text-sm font-black text-brand-safety">03</span>
-            <h3 class="mt-3 text-lg font-bold">Professional Finish</h3>
-            <p class="mt-3 text-sm leading-6 text-brand-steel">
-              Complete the work, protect the site, clean up, and walk the job before closeout.
-            </p>
-          </li>
-        </ol>
       </section>
 
-      <section id="contact" class="bg-brand-charcoal py-16 text-white">
+      <section id="contact" class="bg-brand-ink py-16 text-white">
         <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <div>
-            <p class="text-sm font-bold uppercase tracking-wide text-amber-400">Contact</p>
-            <h2 class="mt-3 text-3xl font-black sm:text-4xl">Ready for your next project.</h2>
-            <p class="mt-4 text-slate-300">
-              Fill out the form or call to schedule a free estimate. We respond quickly and can
-              often provide same-day or next-day appointments.
+            <p class="text-sm font-bold uppercase tracking-widest text-brand-teal">Contact</p>
+            <h2 class="mt-3 font-display text-3xl sm:text-4xl">Ready when you need us.</h2>
+            <p class="mt-4 text-white/70">
+              Have a plumbing question, an emergency, or want a free quote? Call or send us a
+              message and we&rsquo;ll get back to you.
             </p>
-            <div class="mt-8 space-y-3 text-sm text-slate-200">
-              <p><strong class="text-white">Phone:</strong> (555) 012-2900</p>
-              <p><strong class="text-white">Email:</strong> estimates@acmedrywall.example</p>
-              <p><strong class="text-white">Service Area:</strong> Your city and surrounding suburbs</p>
+            <div class="mt-8 space-y-3 text-sm text-white/80">
+              <p>
+                <strong class="text-white">Phone:</strong>
+                <a class="hover:text-brand-teal" href="tel:+16207977465">(620) 797-7465</a>
+              </p>
+              <p><strong class="text-white">Service Area:</strong> Great Bend, Kansas &amp; surrounding areas</p>
             </div>
           </div>
 
-          <form id="contactForm" class="rounded bg-white p-6 text-brand-charcoal shadow-sm" novalidate>
+          <form id="contactForm" class="rounded-lg bg-white p-6 text-brand-ink shadow-sm" novalidate>
             <div id="formStatus" class="mb-5 hidden rounded border px-4 py-3 text-sm" role="status"></div>
             <div class="grid gap-5 sm:grid-cols-2">
               <label class="block">
                 <span class="text-sm font-semibold">Name</span>
                 <input
-                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  class="mt-2 w-full rounded border border-black/20 px-3 py-3 outline-none ring-brand-teal focus:ring-2"
                   type="text"
                   name="name"
                   autocomplete="name"
@@ -297,7 +301,7 @@
               <label class="block">
                 <span class="text-sm font-semibold">Phone</span>
                 <input
-                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  class="mt-2 w-full rounded border border-black/20 px-3 py-3 outline-none ring-brand-teal focus:ring-2"
                   type="tel"
                   name="phone"
                   autocomplete="tel"
@@ -307,65 +311,48 @@
               <label class="block sm:col-span-2">
                 <span class="text-sm font-semibold">Email</span>
                 <input
-                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  class="mt-2 w-full rounded border border-black/20 px-3 py-3 outline-none ring-brand-teal focus:ring-2"
                   type="email"
                   name="email"
                   autocomplete="email"
                   required
                 />
               </label>
-              <label class="block">
-                <span class="text-sm font-semibold">Project Type</span>
-                <select
-                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
-                  name="projectType"
-                  required
-                >
-                  <option value="">Select one</option>
-                  <option>Drywall hanging</option>
-                  <option>Taping and finishing</option>
-                  <option>Repair or patch</option>
-                  <option>Commercial buildout</option>
-                </select>
-              </label>
-              <label class="block">
-                <span class="text-sm font-semibold">Timeline</span>
-                <select
-                  class="mt-2 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
-                  name="timeline"
-                >
-                  <option>Flexible</option>
-                  <option>As soon as possible</option>
-                  <option>Within 2 weeks</option>
-                  <option>Within 1 month</option>
-                </select>
+              <label class="block sm:col-span-2">
+                <span class="text-sm font-semibold">Address (Street, City, Zip Code)</span>
+                <input
+                  class="mt-2 w-full rounded border border-black/20 px-3 py-3 outline-none ring-brand-teal focus:ring-2"
+                  type="text"
+                  name="address"
+                  autocomplete="street-address"
+                />
               </label>
               <label class="block sm:col-span-2">
-                <span class="text-sm font-semibold">Project Details</span>
+                <span class="text-sm font-semibold">How can we help?</span>
                 <textarea
-                  class="mt-2 min-h-32 w-full rounded border border-slate-300 px-3 py-3 outline-none ring-brand-safety focus:ring-2"
+                  class="mt-2 min-h-32 w-full rounded border border-black/20 px-3 py-3 outline-none ring-brand-teal focus:ring-2"
                   name="message"
-                  placeholder="Tell us about room count, square footage, repairs, textures, or deadlines."
+                  placeholder="Tell us what's going on and we'll follow up with a free estimate."
                   required
                 ></textarea>
               </label>
             </div>
             <button
-              class="mt-6 w-full rounded bg-brand-safety px-5 py-3 font-bold text-white shadow-sm hover:bg-amber-700"
+              class="mt-6 w-full rounded bg-brand-teal px-5 py-3 font-bold text-white shadow-sm hover:bg-brand-tealDark"
               type="submit"
             >
-              Send Estimate Request
+              Get a Free Quote
             </button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="bg-white">
-      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-brand-steel sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <p>&copy; <span id="year"></span> Acme Drywall Co. All rights reserved.</p>
-        <p>Licensed and insured. Replace with your license number.</p>
-        <p class="rounded bg-brand-safety px-4 py-2 font-semibold text-white shadow-sm hover:bg-amber-700"><a href="https://prairiewebstudio.com">Click to return to prairiewebstudio.com</p></a>
+    <footer class="bg-brand-cream">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-brand-slate sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <p class="font-display text-brand-purple">LLB Plumbing</p>
+        <p>&copy; <span id="year"></span> LLB Plumbing. All rights reserved.</p>
+        <a class="font-semibold text-brand-teal hover:text-brand-tealDark" href="tel:+16207977465">(620) 797-7465</a>
       </div>
     </footer>
 

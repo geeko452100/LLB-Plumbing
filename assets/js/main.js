@@ -42,22 +42,21 @@ if (contactForm) {
     }
 
     const data = Object.fromEntries(new FormData(contactForm).entries());
-    const subject = encodeURIComponent(`Estimate request from ${data.name}`);
+    const subject = encodeURIComponent(`Free estimate request from ${data.name}`);
     const body = encodeURIComponent(
       [
         `Name: ${data.name}`,
         `Phone: ${data.phone}`,
         `Email: ${data.email}`,
-        `Project Type: ${data.projectType}`,
-        `Timeline: ${data.timeline}`,
+        `Address: ${data.address}`,
         "",
-        "Project Details:",
+        "Details:",
         data.message,
       ].join("\n"),
     );
 
     showStatus("success", "Thanks. Your email app will open with the estimate request ready to send.");
-    window.location.href = `mailto:estimates@acmedrywall.example?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:office@llbplumbing.example?subject=${subject}&body=${body}`;
     contactForm.reset();
   });
 }

@@ -5,12 +5,18 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          charcoal: "#202124",
-          steel: "#48515a",
-          safety: "#d97706",
-          plaster: "#f3f1ec",
-          board: "#f8fafc",
+          purple: "#5B2A86",
+          purpleDark: "#3D1B5C",
+          teal: "#0F6B72",
+          tealDark: "#0B4F54",
+          cream: "#F5F2EA",
+          ink: "#1B1B1B",
+          slate: "#5B5850",
         },
+      },
+      fontFamily: {
+        sans: ["'Josefin Sans'", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["'Righteous'", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },
