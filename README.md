@@ -1,10 +1,10 @@
-# LLB Plumbing
+# Acme Plumbing
 
-Static marketing website for LLB Plumbing. Built from a Tailwind CSS starter template — a small production CSS file is committed for fast first loads, while the Tailwind build setup stays available for edits.
+Static marketing website for Acme Plumbing. Built from a Tailwind CSS starter template — a small production CSS file is committed for fast first loads, while the Tailwind build setup stays available for edits.
 
 ## Status
 
-The site currently still has placeholder content from the starter template (business name shows "ACME Drywall", phone number is a placeholder). Swap these out in `index.html` before shipping — see Customize below.
+The site currently still has placeholder contact details from the starter template. Update the phone number and service details in `index.html` before shipping — see Customize below.
 
 ## Files
 

@@ -57,6 +57,7 @@ if (contactForm) {
         phone: data.phone,
         address: data.address,
         notes,
+        emergency: false,
       });
       showStatus("success", "Thanks. We've been notified and will call you back shortly.");
       contactForm.reset();
